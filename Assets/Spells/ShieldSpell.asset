@@ -15,5 +15,5 @@ MonoBehaviour:
   spellName: Shield
   icon: {fileID: -104276854, guid: ab0e211bf611ced438bc82a6731e57a9, type: 3}
   charges: 3
-  castPrefab: {fileID: 8702959641058052103, guid: 4757a265810260948bd0b2f0ff2fbdf3, type: 3}
+  castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
   prefabLifetime: 2

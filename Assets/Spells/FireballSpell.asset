@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: Fireball
   icon: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  charges: 3
-  castPrefab: {fileID: 8702959641058052103, guid: 4757a265810260948bd0b2f0ff2fbdf3, type: 3}
+  charges: 4
+  castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
   prefabLifetime: 2
