@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireballSpell
   m_EditorClassIdentifier: 
   spellName: Fireball
-  icon: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  icon: {fileID: -7836374204139170231, guid: 4951c86255f23914d8e00e4759c42aa5, type: 3}
   charges: 4
   castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
   prefabLifetime: 2
