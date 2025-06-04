@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HealSpell
   m_EditorClassIdentifier: 
   spellName: Heal
-  icon: {fileID: -775861513, guid: ab0e211bf611ced438bc82a6731e57a9, type: 3}
+  icon: {fileID: -3220530768161434197, guid: 71d6360704d1f7240a48d96ce4f80c59, type: 3}
   charges: 3
   castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
   prefabLifetime: 2

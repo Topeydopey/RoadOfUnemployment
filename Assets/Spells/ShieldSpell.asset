@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShieldSpell
   m_EditorClassIdentifier: 
   spellName: Shield
-  icon: {fileID: -104276854, guid: ab0e211bf611ced438bc82a6731e57a9, type: 3}
+  icon: {fileID: 4744055327125900489, guid: 0bf3c9732c8521649adf7b7d7c7d2584, type: 3}
   charges: 3
   castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
   prefabLifetime: 2
