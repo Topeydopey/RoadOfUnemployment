@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c02e235674a874f85927f6dc747795, type: 3}
-  m_Name: FireballSpell
+  m_Name: Bloodvortex
   m_EditorClassIdentifier: 
-  spellName: Fireball
-  icon: {fileID: -7836374204139170231, guid: 4951c86255f23914d8e00e4759c42aa5, type: 3}
-  charges: 4
-  castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
-  prefabLifetime: 2
+  spellName: Blood Vortex
+  icon: {fileID: 5458206491816022952, guid: d1dc4cd1d65e12c4594d9099db7016cd, type: 3}
+  charges: 5
+  castPrefab: {fileID: 3307465869289937514, guid: 3687320b113d3944cb8384aa189d5f86, type: 3}
+  prefabLifetime: 15

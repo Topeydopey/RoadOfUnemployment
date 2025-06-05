@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c02e235674a874f85927f6dc747795, type: 3}
-  m_Name: HealSpell
+  m_Name: BloodBoomerang
   m_EditorClassIdentifier: 
-  spellName: Heal
-  icon: {fileID: -3220530768161434197, guid: 71d6360704d1f7240a48d96ce4f80c59, type: 3}
-  charges: 3
-  castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
+  spellName: Blood Boomerang
+  icon: {fileID: -8701340461635486501, guid: 6e1c544c8e9cb974faa1b279edb21434, type: 3}
+  charges: 10
+  castPrefab: {fileID: 7358662956292812559, guid: 51460f2396f17c34fa9d7e996f551db4, type: 3}
   prefabLifetime: 2

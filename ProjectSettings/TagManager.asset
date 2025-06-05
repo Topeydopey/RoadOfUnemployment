@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
+  - Projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - Ground
   - Spawned
   - Wall
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - EnemyProjectile
+  - Player
+  - PlayerProjectile
   - 
   - 
   - 

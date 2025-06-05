@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c02e235674a874f85927f6dc747795, type: 3}
-  m_Name: ShieldSpell
+  m_Name: BoneHand
   m_EditorClassIdentifier: 
-  spellName: Shield
-  icon: {fileID: 4744055327125900489, guid: 0bf3c9732c8521649adf7b7d7c7d2584, type: 3}
-  charges: 3
+  spellName: Bone Hand
+  icon: {fileID: 2227221242760239245, guid: ec2165177b6a2d647a4bda95a02a5adc, type: 3}
+  charges: 10
   castPrefab: {fileID: 8284126425839386206, guid: a27479b48d0e33d489e7de5f86703d53, type: 3}
   prefabLifetime: 2
