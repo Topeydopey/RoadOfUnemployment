@@ -109,17 +109,17 @@ public class ChargerEnemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        // Crash into walls ends the charge early
+        /* 1. Crash into wall ends dash (kept as-is) */
         if (state == State.Charge && col.collider.CompareTag("Wall"))
         {
             rb.linearVelocity = Vector2.zero;
         }
 
-        // Contact damage to player (1 token)
+        /* 2. Normal contact damage to player */
         if (col.collider.CompareTag("Player"))
         {
             var stats = col.collider.GetComponent<PlayerStats>();
-            if (stats) stats.currentTokens--;
+            if (stats) stats.TakeDamage(1);        //  ← NEW
         }
     }
 }

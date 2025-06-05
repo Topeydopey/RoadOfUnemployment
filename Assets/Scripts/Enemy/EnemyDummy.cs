@@ -21,4 +21,10 @@ public class EnemyDummy : MonoBehaviour
         Instantiate(tokenPickupPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+        other.GetComponent<PlayerStats>()?.TakeDamage(1);
+    }
+
 }

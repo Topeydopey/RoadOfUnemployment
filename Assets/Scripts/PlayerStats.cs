@@ -18,6 +18,8 @@ public class PlayerStats : MonoBehaviour
     [Header("Input Actions")]
     public InputActionReference cast;        // Button  (Space / South)
     public InputActionReference cycle;       // Value2 (MouseScroll)
+    [Header("Visuals")]
+    public Animator anim;
 
     /*────────────────────────  LIFECYCLE  ─────────────────────*/
     void OnEnable()
@@ -84,6 +86,9 @@ public class PlayerStats : MonoBehaviour
         go.GetComponent<BloodBolt>()?.Init(dir);
         // (VortexField ignores these Init calls)
 
+        /* NEW → kick off the cast animation */
+        anim.SetTrigger("Cast");
+
         Destroy(go, spell.prefabLifetime);
 
         /* ---------- consume a charge ---------- */
@@ -104,5 +109,15 @@ public class PlayerStats : MonoBehaviour
 
         int dir = scrollY > 0 ? -1 : 1;                 // invert for natural feel
         activeIndex = (activeIndex + dir + spellBar.Count) % spellBar.Count;
+    }
+    public void TakeDamage(int amount = 1)
+    {
+        Debug.Log($"TakeDamage() called for {amount}");   //  ← TEMP
+
+        currentTokens = Mathf.Max(0, currentTokens - amount);
+        anim.SetTrigger("Hurt");
+
+        if (currentTokens <= 0)
+            Debug.Log("Player died — send to Purgatory!");
     }
 }

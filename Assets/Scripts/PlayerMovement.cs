@@ -3,46 +3,43 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MoveSpeed;
+    [Header("Movement")]
+    public float MoveSpeed = 5f;
     public Rigidbody2D body;
 
-    public InputActionReference move; // Link this to the "Move" InputAction in the Inspector
+    [Header("Input")]
+    public InputActionReference move;      // “Move” action (Vector 2)
 
-    private Vector2 _moveDirection;
+    [Header("Visuals")]
+    public Animator anim;                  // Player Animator
+    public SpriteRenderer sr;              // Player SpriteRenderer (for flip)
 
-    private void OnEnable()
+    /* ─────────────────────── private ─────────────────────── */
+    Vector2 _moveDir;
+    float _lastFacingX = 1f;            // remember last non-zero X (1 = right, -1 = left)
+
+    /* ─────────────────────── lifecycle ───────────────────── */
+    void OnEnable() => move.action.Enable();
+    void OnDisable() => move.action.Disable();
+
+    void Update()
     {
-        move.action.Enable();
-    }
+        /* -- read input -- */
+        _moveDir = move.action.ReadValue<Vector2>();
 
-    private void OnDisable()
-    {
-        move.action.Disable();
-    }
-
-    private void Update()
-    {
-        _moveDirection = move.action.ReadValue<Vector2>();
-
-        float xInput = _moveDirection.x;
-        float yInput = _moveDirection.y;
-
-        if (Mathf.Abs(xInput) > 0)
+        /* -- if NOT in Hurt, drive Speed param -- */
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt"))
         {
-            body.linearVelocity = new Vector2(xInput * MoveSpeed, body.linearVelocity.y);
+            anim.SetFloat("Speed", _moveDir.sqrMagnitude);
         }
 
-        if (Mathf.Abs(yInput) > 0)
-        {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * MoveSpeed);
-        }
+        /* -- flip sprite -- */
+        if (Mathf.Abs(_moveDir.x) > 0.01f)
+            _lastFacingX = Mathf.Sign(_moveDir.x);
 
-        /*
-                // Optional: if there's no input at all, stop moving
-                if (xInput == 0 && yInput == 0)
-                {
-                    body.linearVelocity = Vector2.zero;
-                }
-        */
+        sr.flipX = _lastFacingX < 0f;
+
+        /* -- move rigidbody -- */
+        body.linearVelocity = _moveDir * MoveSpeed;
     }
 }
